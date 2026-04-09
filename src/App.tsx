@@ -10,10 +10,11 @@ function App() {
 
       <main className="flex-1 flex flex-col items-center pt-16 px-4">
         
-        {/* Administrador Toggle (Canto direito superior do main) */}
-        <div className="w-full max-w-6xl flex justify-end mb-8">
-          <button className="bg-[#0067A5] text-white px-4 py-1.5 rounded text-sm font-medium shadow-sm hover:bg-[#005892]">
-            Administrador
+        <div className="fixed top-20 right-2.5">
+          <button className="px-4 py-2 text-white rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 bg-linear-to-r from-[#0066a3] to-[#0a2f4f] bg-[length:200%_100%]">
+            <span className="relative z-10 text-[14px] font-bold">
+              Administrador
+            </span>
           </button>
         </div>
 
