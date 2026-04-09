@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-romi-blue: #0067A5;
+  --color-romi-green: #00945E;
+  --color-romi-magenta: #B51F52;
+  --color-romi-purple: #4D148C;
+  --color-romi-gray: #58748F;
+  --background-image-romi-gradient: linear-gradient(90deg, #0067a5 0%, rgb(11, 46, 77) 100%);
+}
