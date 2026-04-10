@@ -1,48 +1,65 @@
-import { Factory, Handshake, Headphones, Settings, BarChart3, Bell, ChevronDown } from 'lucide-react';
 import { Header } from './components/Header';
 import { HeroLogo } from './components/HeroLogo';
+import { Card } from './components/Card';
 
 function App() {
   return (
     <div className="min-h-screen bg-[#F4F7F9] flex flex-col font-sans">
-      
       <Header />
 
       <main className="flex-1 flex flex-col items-center pt-16 px-4">
-        
-        <div className="fixed top-20 right-2.5">
-          <button className="px-4 py-2 text-white rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 bg-linear-to-r from-[#0066a3] to-[#0a2f4f] bg-[length:200%_100%]">
-            <span className="relative z-10 text-[14px] font-bold">
-              Administrador
-            </span>
+        <div className="fixed top-20 right-2.5 z-50">
+          <button className="px-4 py-2 text-white rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 bg-gradient-to-r from-[#0066a3] to-[#0a2f4f]">
+            <span className="relative z-10 text-[14px] font-bold">Administrador</span>
           </button>
         </div>
 
         <HeroLogo />
 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mt-12 px-4">
+          <Card
+            title="Fábrica"
+            gradient="bg-gradient-to-r from-[#0067A5] to-[#0B2E4D]"
+            icon={
+              <svg viewBox="0 0 53.217 53.217" width="53.217" height="53.217">
+                <g transform="translate(35.547)"><path d="M1.559,0H16.111A1.559,1.559,0,0,1,17.67,1.559V5.2H0V1.559A1.559,1.559,0,0,1,1.559,0Z" fill="currentColor"/></g>
+                <g transform="translate(0 8.315)"><path d="M.783,86.547a1.559,1.559,0,0,1,1.563.007l15.427,9.022V87.9a1.559,1.559,0,0,1,2.346-1.346l15.427,9.022V80h17.67v43.343a1.559,1.559,0,0,1-1.559,1.559H1.559A1.559,1.559,0,0,1,0,123.343V87.9A1.559,1.559,0,0,1,.783,86.547Zm28.528,27.389A1.559,1.559,0,0,0,30.87,115.5h6.236a1.559,1.559,0,0,0,1.559-1.559V107.7a1.559,1.559,0,0,0-1.559-1.559H30.87a1.559,1.559,0,0,0-1.559,1.559Zm-17.774,0A1.559,1.559,0,0,0,13.1,115.5h6.236a1.559,1.559,0,0,0,1.559-1.559V107.7a1.559,1.559,0,0,0-1.559-1.559H13.1a1.559,1.559,0,0,0-1.559,1.559Z" transform="translate(0 -80)" fill="currentColor"/></g>
+              </svg>
+            }
+          />
+
+          <Card
+            title="Locação"
+            gradient="bg-gradient-to-r from-[#03A86E] to-[#0B2E4D]"
+            icon={
+              <svg width="57" height="34" viewBox="0 0 57 34">
+                <path d="M38.545,5.25H30.928a2.836,2.836,0,0,0-1.915.745L20.3,13.975c-.009.009-.018.027-.027.035a3.527,3.527,0,0,0-.186,4.966,3.7,3.7,0,0,0,4.974.239c.009-.009.027-.009.035-.018l7.085-6.491A1.418,1.418,0,0,1,34.094,14.8l-2.314,2.119L44.69,27.4a6.388,6.388,0,0,1,.7.683V10.925L40.549,6.084a2.817,2.817,0,0,0-2-.834Zm9.692,5.693V30.8a2.834,2.834,0,0,0,2.837,2.837h5.675V10.943ZM52.493,30.8a1.419,1.419,0,1,1,1.419-1.419A1.423,1.423,0,0,1,52.493,30.8ZM0,33.625H5.675a2.834,2.834,0,0,0,2.837-2.837V10.943H0Zm4.256-5.666a1.419,1.419,0,1,1-1.419,1.419A1.423,1.423,0,0,1,4.256,27.958Zm38.651,1.649L29.669,18.861,27.009,21.3a6.382,6.382,0,0,1-8.628-9.408L25.635,5.25H18.2a2.832,2.832,0,0,0-2,.834l-4.85,4.841V30.778h1.623L21,38.04a5.674,5.674,0,0,0,7.98-.825L29,37.2l1.587,1.374a3.3,3.3,0,0,0,4.637-.479L38,34.671l.479.39a2.833,2.833,0,0,0,3.99-.417l.842-1.037a2.843,2.843,0,0,0-.408-4Z" transform="translate(0 -5.25)" fill="currentColor"/>
+              </svg>
+            }
+          />
+
+          <Card
+            title="Assistência Técnica"
+            gradient="bg-gradient-to-r from-[#BD1859] to-[#0B2E4D]"
+            icon={
+              <svg width="80" height="80" viewBox="130 130 764 764">
+                <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                  <path d="M5700 8999 c-353 -29 -677 -115 -959 -255 -147 -72 -371 -211 -371 -229 0 -12 200 -488 209 -498 5 -5 45 18 89 50 384 274 846 408 1351 390 153 -5 346 -30 446 -58 294 -80 549 -203 785 -378 110 -81 305 -280 398 -405 181 -245 283 -481 332 -769 29 -174 30 -170 -32 -185 -120 -28 -239 -114 -291 -210 -15 -28 -37 -86 -48 -129 -19 -75 -20 -106 -19 -793 0 -423 5 -741 10 -778 37 -228 167 -360 401 -408 71 -14 121 -16 319 -11 129 3 245 9 257 13 l22 6 -21 -58 c-11 -33 -44 -108 -73 -169 -157 -329 -438 -580 -788 -704 -134 -47 -269 -70 -481 -81 -122 -7 -209 -16 -240 -26 -104 -35 -165 -141 -151 -263 13 -111 79 -181 190 -202 84 -16 354 -5 517 22 626 100 1192 561 1442 1176 86 210 143 452 166 703 16 185 13 722 -5 799 -24 100 -73 171 -151 217 l-41 24 -6 253 c-4 167 -10 271 -19 308 -45 175 -164 289 -337 322 -70 13 -67 7 -76 137 -33 478 -278 1005 -650 1398 -321 339 -764 599 -1215 712 -301 76 -647 104 -960 79z"/>
+                  <path d="M3330 8981 c0 -13 52 -142 340 -836 351 -847 469 -1134 570 -1380 144 -352 446 -1084 685 -1660 112 -269 251 -607 310 -750 898 -2180 926 -2247 939 -2262 11 -11 584 -98 593 -90 5 6 -203 520 -512 1267 -42 102 -112 271 -155 375 -43 105 -101 246 -130 315 -29 69 -103 249 -165 400 -230 559 -516 1253 -635 1540 -156 377 -498 1205 -605 1465 -73 178 -221 535 -480 1160 -45 110 -106 257 -135 328 l-52 127 -72 0 c-40 0 -168 3 -284 7 -162 5 -212 3 -212 -6z"/>
+                  <path d="M2430 8141 c-73 -24 -129 -72 -430 -368 -348 -342 -370 -370 -370 -464 0 -80 6 -91 254 -479 47 -74 86 -141 86 -150 0 -13 -103 -233 -205 -435 -53 -106 -78 -120 -251 -140 -71 -8 -183 -19 -249 -25 -206 -17 -271 -37 -331 -102 -40 -42 -59 -79 -73 -146 -15 -73 -15 -901 0 -974 20 -94 71 -168 141 -204 17 -9 167 -47 335 -85 321 -72 315 -70 352 -103 18 -17 281 -533 281 -553 0 -3 -67 -112 -150 -244 -167 -265 -190 -313 -190 -397 0 -105 17 -126 356 -463 170 -169 325 -315 344 -325 49 -26 181 -26 230 0 19 10 130 90 245 176 116 86 225 164 242 174 62 32 55 34 448 -128 88 -37 170 -77 183 -89 24 -24 37 -72 87 -317 52 -257 73 -309 143 -355 80 -52 125 -57 575 -53 468 4 475 5 553 84 56 55 71 108 129 439 31 175 51 268 63 284 11 15 88 57 200 110 162 76 181 87 176 106 -4 11 -96 234 -206 495 -110 261 -210 498 -221 525 -11 28 -24 54 -28 58 -3 5 -45 -12 -92 -36 -184 -99 -361 -145 -587 -154 -250 -9 -437 21 -647 107 -385 157 -702 482 -837 858 -68 190 -91 352 -83 590 12 382 133 668 395 936 172 175 382 302 637 386 55 18 101 34 103 35 2 2 -75 191 -308 750 -78 187 -144 348 -147 358 -3 10 -12 16 -22 13 -83 -25 -347 -86 -371 -86 -46 0 -95 28 -340 200 -124 86 -241 165 -259 174 -38 20 -124 29 -161 17z"/>
+                </g>
+              </svg>
+            }
+          />
+        </div>
       </main>
 
-      {/* Botão Feedback */}
-      <button className="fixed bottom-4 right-4 bg-[#005892] text-white px-4 py-2 rounded flex items-center gap-2 shadow-lg text-sm">
-        <Bell size={16} /> Feedback
+      <button className="fixed bottom-4 right-4 px-4 py-2 text-white rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 bg-gradient-to-r from-[#0066a3] to-[#0a2f4f] flex items-center gap-2 shadow-lg">
+        <svg width="20" height="20" viewBox="0 -0.5 17 17" xmlns="http://www.w3.org/2000/svg" className="fill-current">
+          <path d="M14.1,0 L3.902,0 C2.873,0 2.039,0.795 2.039,2.094 L2.039,7.938 C2.039,9.237 2.873,9.989 3.902,9.989 L9.602,9.989 L8.032,14.969 L12.506,9.989 L14.101,9.989 C15.13,9.989 15.965,9.237 15.965,7.938 L15.965,2.094 C15.964,0.795 15.129,0 14.1,0 L14.1,0 Z M5.02,6.312 C4.301,6.312 3.719,5.722 3.719,4.994 C3.719,4.266 4.301,3.677 5.02,3.677 C5.741,3.677 6.321,4.267 6.321,4.994 C6.32,5.723 5.74,6.312 5.02,6.312 L5.02,6.312 Z M9,6.24 C8.291,6.24 7.719,5.682 7.719,4.994 C7.719,4.306 8.291,3.749 9,3.749 C9.707,3.749 10.281,4.307 10.281,4.994 C10.281,5.683 9.707,6.24 9,6.24 L9,6.24 Z M13,6.24 C12.295,6.24 11.719,5.682 11.719,4.994 C11.719,4.306 12.295,3.749 13,3.749 C13.707,3.749 14.281,4.307 14.281,4.994 C14.281,5.683 13.707,6.24 13,6.24 L13,6.24 Z" />
+        </svg>
+        <span className="text-[14px] font-bold">Feedback</span>
       </button>
-    </div>
-  );
-}
-
-// Componente de Card para evitar repetição
-function Card({ title, icon, gradient }: { title: string, icon: React.ReactNode, gradient: string }) {
-  return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1">
-      <div 
-        className="h-32 flex items-center justify-center text-white"
-        style={{ background: gradient }}
-      >
-        {icon}
-      </div>
-      <div className="py-4 text-center font-bold text-[#333] uppercase text-sm tracking-tight px-2">
-        {title}
-      </div>
     </div>
   );
 }
